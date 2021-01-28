@@ -12,6 +12,7 @@ import {selectCurrentUser} from './redux/user/user.selector';
 import {createStructuredSelector} from 'reselect';
 import CheckoutPage from './pages/checkout/checkout.component';
 
+
 class App extends React.Component{
   unsubscribeFromAuth=null;
   componentDidMount(){
@@ -38,12 +39,12 @@ class App extends React.Component{
     const {currentUser}=this.props;
   return (
       <div >
-        <Header/>
+         <Header/> 
       <Switch>
         <Route exact path='/' component={HomePage}/>
-        <Route exact path='/shop' component={ShopPage}/>
+        <Route exact path='/shop' component={ShopPage}/> 
         <Route path='/signin' render={()=>currentUser ? (<Redirect to='/'/>) :(<SignInSignUp/>) }/>
-        <Route path='/checkout' component={CheckoutPage}/>
+        <Route path='/checkout' component={CheckoutPage}/> 
       </Switch>
       </div>
     );
