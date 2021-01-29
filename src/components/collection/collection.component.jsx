@@ -6,7 +6,6 @@ import { selectCartItems } from '../../redux/cart/cart.selector';
 import CollectionItem from '../collection-item/collection-item.component';
 const CollectionPage=({collections})=>{
     const {id, title, items}=collections;
-  
     return <div className='collection-page'>
         <h2 className='title'>{title}</h2>
         <div className="items">

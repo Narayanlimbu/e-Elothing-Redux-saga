@@ -9,8 +9,7 @@ import CartDropdown from '../cart-dropdown/cart-dropdown.component';
 import {createStructuredSelector} from 'reselect';
 import {selectCurrentUser} from '../../redux/user/user.selector';
 import {selectCartHidden} from "../../redux/cart/cart.selector";
-const Header=({currentUser, hidden, msg})=>{
-   console.log('message from header', msg);
+const Header=({currentUser, hidden})=>{
     return <div className='header'>
             <Link className='logo-container' to='/'>
                 <Logo className='logo'/>
